@@ -5,7 +5,7 @@ function Navbar() {
   const [toggle, setToggle] = useState(false);
 
   return (
-    <nav className="shadow-lg sticky w-full">
+    <nav className="shadow-lg sticky w-full mb-20">
       <div className="flex items-center justify-between overflow-hidden h-20">
         <div className="w-32">
           <img

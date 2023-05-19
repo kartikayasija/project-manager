@@ -2,6 +2,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
 import Navbar from "./components/Navbar";
 import Login from "./components/Login";
+import ProjectList from "./components/ProjectList";
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
         <Navbar />
         <Routes>
           <Route path="/logout" element={<Login />}/>
+          <Route path="/" element={<ProjectList />}/>
         </Routes>
       </BrowserRouter>
     </>
