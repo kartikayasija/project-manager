@@ -1,10 +1,11 @@
 import { useState } from "react";
+import { Link,NavLink } from "react-router-dom";
 
 function Navbar() {
   const [toggle, setToggle] = useState(false);
 
   return (
-    <nav className="shadow-lg fixed w-full">
+    <nav className="shadow-lg sticky w-full">
       <div className="flex items-center justify-between overflow-hidden h-20">
         <div className="w-32">
           <img
@@ -17,13 +18,13 @@ function Navbar() {
         <div>
           <ul className="sm:flex gap-20 mx-10 hidden">
             <li className="hover:text-blue-500">
-              <a href="">Projects</a>
+              <NavLink to='/'>Projects</NavLink>
             </li>
             <li className="hover:text-blue-500">
-              <a href="">Account</a>
+              <NavLink to='/account'>Account</NavLink>
             </li>
             <li className="hover:text-blue-500">
-              <a href="">Logout</a>
+             <NavLink to='/logout'>Logout</NavLink> 
             </li>
           </ul>
         </div>
@@ -32,7 +33,7 @@ function Navbar() {
           className="sm:hidden mx-10"
           onClick={() => (toggle ? setToggle(false) : setToggle(true))}
         >
-          Show
+          Toggle
         </button>
       </div>
 
